@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        STUDENT MANAGEMENT APPLICATION
+    </title>
+	
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="container" >
+    <table>
+        <tr>
+            <td>
+			<div class="container" >
+                <form  name="san" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+				
+                    <div class="container">
+                        <label>Full Name</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div class="container">
+                        <label>Roll no*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="rno" id="rno">
+                    </div>
+                    <div class="container">
+                        <label>Department</label>
+                        <input type="text" name="dept" id="dept">
+                    </div>
+                    <div class="container">
+                        <label>City</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+					
+
+					
+                    <div  class="form-action-buttons">
+                        <input type="submit"  value="Submit">
+						
+                    </div>
+                </form>
+				</div>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Roll No</th>
+                            <th>Department</th>
+                            <th>City</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+	</div>
+	<p  id ="move" onmousemove="moveone()"> Details </p> 
+	
+	<p>Seconds you have spent viewing this page so far:
+
+	<span style="font-size: 250%" id = "soFar">0</span>
+
+	</p>
+	
+	<script style="font-size: 250%" type = "text/javascript">
+	function moveone()
+	{
+	document.getElementById("move").innerHTML =" A Student management system (SMS) is software to manage all day to day operations for a school.";
+	}
+	
+	</script>
+	
+	
+	<script type="text/javascript">
+	var seconds = 0;
+	function startTimer()
+	{
+		window.setInterval( "updateTime()", 1000 );
+	} 
+
+
+	function updateTime()
+	{
+		 ++seconds;
+		document.getElementById( "soFar" ).innerHTML = seconds;
+	 } 
+	window.addEventListener( "load", startTimer, false );
+	</script>
+    <script src="script.js"></script>
+</body>
+
+</html>

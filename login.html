@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title> login page </title>
+    <link rel="stylesheet" type="text/css" href="style.css">   
+    
+</head>
+    <body>
+         
+          
+        
+    <div id="loading"></div>
+    <div  class="login-box">
+    <img src="avatar.png" class="avatar">
+        <h1>Login Here</h1>
+            <form name="aaa">
+            <p>Username</p>
+            <input type="text" id="email" name="email" placeholder="Enter Email">
+            <p>Password</p>
+            <input type="password" id="password" name="password" placeholder="Enter Password">
+            <span id="error"></span>
+            <input type="submit" id="Signup" name="submit" value="Signup">
+            <input type="button" onclick="log()" id="Login" name="submit" value="login">
+			
+            <a href="#">Forget Password</a>    
+            </form>
+        
+        
+        </div>
+   <script type="text/javascript">
+   function log(){
+   if(document.aaa.email.value=="admin" && document.aaa.password.value=="admin" )
+   {
+		location.href="index.html";
+   }
+   else
+   {
+		alert("Invalid username and password");
+   }
+   
+   }
+   </script>
+    
+    </body>
+	
+</html>
+
+
+
+
